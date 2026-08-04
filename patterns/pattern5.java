@@ -2,7 +2,7 @@
 public class pattern5 {
     public static void invertedRightPyrimid(int n){
         for(int i=0;i<n;i++){
-            for(int j=n-i;j>0;j--){//n-i is a keypoint
+            for(int j=n;j>i;j--){//j=n-i is a keypoint or the condition is j>i
                 System.out.print("*");
             } 
             System.out.println();
