@@ -2,7 +2,13 @@ package BasicMathQuestions;
 public class countAllDigits{
     public static void main(String[] args) {
         int count=countNumberBruteForce(1234567);
-        System.out.println(count);
+        int count2=countNumberOptimal(12345);
+        System.out.println(count+" "+count2);
+    }
+
+    private static int countNumberOptimal(int i) {
+        int count = (int)Math.log10(i)+1;
+        return count;
     }
 
     private static int countNumberBruteForce(int num) {
