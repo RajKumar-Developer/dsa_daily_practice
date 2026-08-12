@@ -3,6 +3,8 @@ package BasicRecurssion;
 public class stringPalindrome {
     public static void main(String[] args) {
         System.out.println(bruteforce("MALAYALAM")?"Palindrome":"Not A Palindrome");
+        System.out.println(recurssionPalindrome(0,"MALYALAM")?"Palindrome":"Not A Palindrome");
+        
     }
     public static boolean recurssionPalindrome(int i,String str){
         if(i>=str.length()/2){
@@ -11,6 +13,7 @@ public class stringPalindrome {
         if(str.charAt(i)!=str.charAt(str.length()-1-i)){
             return false;
         }
+        return recurssionPalindrome(i+1, str);
     }
     public static boolean bruteforce(String str){
         int p1 = 0,p2 = str.length()-1;
